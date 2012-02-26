@@ -18,7 +18,7 @@ my %module_build_args = (
     "Michal Wojciechowski <odyniec\@cpan.org>"
   ],
   "dist_name" => "File-PlainPath",
-  "dist_version" => "0.01",
+  "dist_version" => "0.011",
   "license" => "perl",
   "module_name" => "File::PlainPath",
   "recommends" => {},

@@ -18,9 +18,10 @@ my $separator_re;
 
 
 sub path {
-    my $path = shift;
+    my @paths = @_;
     
-    return File::Spec->catfile(split($separator_re, $path));
+    my @path_components = map { split($separator_re, $_) } @paths;
+    return File::Spec->catfile(@path_components);
 }
 
 
@@ -47,7 +48,7 @@ File::PlainPath - Construct portable filesystem paths in a simple way
 
 =head1 VERSION
 
-version 0.01
+version 0.011
 
 =head1 SYNOPSIS
 
@@ -81,11 +82,15 @@ any other character can be designated as the separator:
 
 =head2 path
 
-Translates the provided path to OS-specific format.
+Translates the provided path to OS-specific format. If more than one path is
+specified, the paths are concatenated to produce the resulting path. 
 
-Example:
+Examples:
 
     my $path = path 'dir/file.txt';
+
+    my $path = path 'dir', 'subdir/file.txt';
+    # On Unix, this produces: "dir/subdir/file.txt" 
 
 =head2 to_path
 
