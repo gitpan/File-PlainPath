@@ -9,7 +9,8 @@ dist.ini
 lib/File/PlainPath.pm
 pod2htmd.tmp
 pod2htmi.tmp
+t/00-paths.t
+t/01-packages.t
 t/author-critic.t
-t/path.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

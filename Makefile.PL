@@ -23,7 +23,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "File::PlainPath",
   "PREREQ_PM" => {},
-  "VERSION" => "0.011",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
